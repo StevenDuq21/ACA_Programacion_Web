@@ -1,2 +1,74 @@
-<!--ñ -->
- <head></head> 
+<!-- describimos el contenido de la pagina-->
+ <!--!DOCTYPE html= indica que usamos HTML5-->
+ <!--lang = "es"= este identifica el idioma que tendra la pagina-->
+ <!--charset="UTF-8"=permite mostrar caracteres especiale como tildes la Ñ etc-->
+ <!--viewport= adapta la pagina al ancho de los celiulares-->
+ <!--title= este es el nombre que se le da a la pestaña del navegador-->
+ <!--conecta el html con nuestro css con los estilos para la pagina-->
+
+<!DOCTYPE html> 
+<html lang = "es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ruta Motors | Inicio </title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+
+<!--abrimos el body que es donde ira el contenido visible o el cuerpo de la pagina-->
+<!--img class= nos permite poner imagenes en este caso nuestro logo-->
+<!--header= nos sirve para el encabezado-->
+<!--nav= sirve para la navegacion entre nuestras paginas-->
+<!--href= son los links de las paginas a las que podemos acceder con nuestra navegacion-->
+<!--alt= describe la imagen para lectores de pantalla o cuando las imagenes no cargan-->
+ <body>
+    <!--aqui agregamos las secciones de nuestra pagina o sitio-->
+    <header>
+        <img class="logo" src="img/logo.png" alt="Logo Ruta Motors">
+        <h1>Ruta Motors</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="pagina2.html">Cotizar Moto</a>
+            <a href="pagina3.html">Contactos</a>
+        </nav>
+    </header>
+    
+<!--creamos nuestra seccion de  bienvenida para nuestra pagina-->
+<!--section =crea una seccion-->
+<!--creamos un boton que nos redirija a la pagina de cotizacion-->
+<main>
+    <section class="bienvenida">
+        <h2>Encuentra tu proxima Moto en Rutar Motors</h2>
+        <p>Conoce nuestros modelos y elige la moto ideal para ti</p>
+        <a class="boton" href="pagina2.html">Solicitar Cotizacion</a>
+    </section>
+
+    <Section class="modelos">
+        <h2>Motos destacadas</h2>
+   
+    <div class="tarjetas">
+        <article class="tarjeta">
+        <img src="img/imagen1.png" alt="Motocicleta Urbana">
+        <h3>Moto Urbana 150</h3>
+        <p>Moto para movilizarse por la ciudad</p>
+        <p class="precio">$8.490.000 COP</p>
+    </article>
+    
+    <article class="tarjeta">
+        <img src="img/imagen1.png" alt="Motocicleta Urbana">
+        <h3>Moto Urbana 150</h3>
+        <p>Moto para movilizarse por la ciudad</p>
+        <p class="precio">$8.490.000 COP</p>
+    </article>
+
+     <article class="tarjeta">
+        <img src="img/imagen1.png" alt="Motocicleta Urbana">
+        <h3>Moto Urbana 150</h3>
+        <p>Moto para movilizarse por la ciudad</p>
+        <p class="precio">$12.490.000 COP</p>
+    </article>
+    </div>
+ </body>
+</html
