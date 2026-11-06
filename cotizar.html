@@ -29,10 +29,16 @@
             <!-- Inicio del Formulario -->
             <form id="form-cotizacion" action="#" method="POST" novalidate>
                 
-                <!-- Campo Tipo Text -->
+                <!-- Campo Tipo Text - Nombre -->
                 <div style="margin-bottom: 15px;">
                     <label for="nombre"><strong>Nombre Completo:</strong></label><br>
                     <input type="text" id="nombre" name="nombre" required maxlength="100" placeholder="Ej. Marc Márquez Alentà" style="width: 100%; padding: 8px; margin-top: 5px;">
+                </div>
+
+                <!-- Campo Tipo Number - Cédula -->
+                <div style="margin-bottom: 15px;">
+                    <label for="cedula"><strong>Numero de Cédula:</strong></label><br>
+                    <input type="number" id="cedula" name="cedula" required maxlength="10" placeholder="Ej. 1024568512" style="width: 100%; padding: 8px; margin-top: 5px;">
                 </div>
 
                 <!-- Campo Tipo Email -->
@@ -41,13 +47,13 @@
                     <input type="email" id="correo" name="correo" required placeholder="marc_marquez@gmail.com" style="width: 100%; padding: 8px; margin-top: 5px;">
                 </div>
 
-                <!-- Campo Tipo Number -->
+                <!-- Campo Tipo Number - Número de Celular -->
                 <div style="margin-bottom: 15px;">
                     <label for="telefono"><strong>Número de Celular:</strong></label><br>
                     <input type="number" id="telefono" name="telefono" required min="3000000000" max="3999999999" placeholder="Ej. 3001234567" style="width: 100%; padding: 8px; margin-top: 5px;">
                 </div>
 
-                <!-- Campo Tipo Select -->
+                <!-- Campo Tipo Select - Modelo de Interés -->
                 <div style="margin-bottom: 15px;">
                     <label for="modelo"><strong>Modelo de Interés:</strong></label><br>
                     <select id="modelo" name="modelo" required style="width: 100%; padding: 8px; margin-top: 5px;">
@@ -59,10 +65,16 @@
                     </select>
                 </div>
 
-                <!-- Campo Tipo Date -->
+                <!-- Campo Tipo Date  - Fecha preferida -->
                 <div style="margin-bottom: 15px;">
                     <label for="fecha"><strong>Fecha preferida para atención:</strong></label><br>
                     <input type="date" id="fecha" name="fecha" style="width: 100%; padding: 8px; margin-top: 5px;">
+                </div>
+
+                <!-- Campo Tipo Time - Hora preferida -->
+                <div style="margin-bottom: 15px;">
+                    <label for="hora"><strong>Hora preferida para atención:</strong></label><br>
+                    <input type="time" id="hora" name="hora" style="width: 100%; padding: 8px; margin-top: 5px;">
                 </div>
 
                 <!-- Contenedor para mensajes de error de JavaScript -->
