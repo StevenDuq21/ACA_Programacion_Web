@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cotización | Ruta Motors </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo Concesionario" class="logo">
+        <h1>Ruta Motors</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="cotizar.html">Cotizar Moto</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tarjeta" style="margin-top: 24px;">
+            <h2><center>Cotiza tu Motocicleta o Agenda Test Drive</center></h2>
+            <p>Diligencia el siguiente formulario para recibir información comercial detallada.</p>
+
+            <!-- Inicio del Formulario -->
+            <form id="form-cotizacion" action="#" method="POST" novalidate>
+                
+                <!-- Campo Tipo Text -->
+                <div style="margin-bottom: 15px;">
+                    <label for="nombre"><strong>Nombre Completo:</strong></label><br>
+                    <input type="text" id="nombre" name="nombre" required maxlength="100" placeholder="Ej. Marc Márquez Alentà" style="width: 100%; padding: 8px; margin-top: 5px;">
+                </div>
+
+                <!-- Campo Tipo Email -->
+                <div style="margin-bottom: 15px;">
+                    <label for="correo"><strong>Correo Electrónico:</strong></label><br>
+                    <input type="email" id="correo" name="correo" required placeholder="marc_marquez@gmail.com" style="width: 100%; padding: 8px; margin-top: 5px;">
+                </div>
+
+                <!-- Campo Tipo Number -->
+                <div style="margin-bottom: 15px;">
+                    <label for="telefono"><strong>Número de Celular:</strong></label><br>
+                    <input type="number" id="telefono" name="telefono" required min="3000000000" max="3999999999" placeholder="Ej. 3001234567" style="width: 100%; padding: 8px; margin-top: 5px;">
+                </div>
+
+                <!-- Campo Tipo Select -->
+                <div style="margin-bottom: 15px;">
+                    <label for="modelo"><strong>Modelo de Interés:</strong></label><br>
+                    <select id="modelo" name="modelo" required style="width: 100%; padding: 8px; margin-top: 5px;">
+                        <option value="">Selecciona una moto</option>
+                        <option value="CB100">CB 100 2027</option>
+                        <option value="CB125F">CB 125F 2027</option>
+                        <option value="CB190R">CB 190R 2.0 2027</option>
+                        <option value="CB125HORNET">CB 125 HORNET 2027</option>
+                    </select>
+                </div>
+
+                <!-- Campo Tipo Date -->
+                <div style="margin-bottom: 15px;">
+                    <label for="fecha"><strong>Fecha preferida para atención:</strong></label><br>
+                    <input type="date" id="fecha" name="fecha" style="width: 100%; padding: 8px; margin-top: 5px;">
+                </div>
+
+                <!-- Contenedor para mensajes de error de JavaScript -->
+                <div id="mensaje-error-cotizar" style="color: #d9534f; font-weight: bold; margin-bottom: 15px;"></div>
+
+                <button type="submit" class="boton" style="border: none; cursor: pointer;">Enviar Cotización</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ruta Motors - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
