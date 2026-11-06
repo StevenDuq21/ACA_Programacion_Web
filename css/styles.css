@@ -34,3 +34,55 @@ footer { padding: 18px; text-align: center; color: white; background: #18372b; }
   .tarjetas {display: grid;grid-template-columns: repeat(2, minmax(0, 2fr));gap: 20px;}
   .tarjeta img .tarjetas {display: grid;grid-template-columns: repeat(2, minmax(0, 3fr));gap: 20px;}
 }
+
+/* Estilo para los Formularios */
+
+form {
+  text-align: left;
+  max-width: 750px;
+  margin: 20px auto 0 auto;
+}
+
+/* Cuadrícula de 2 columnas para escritorio */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 20px;
+}
+
+/* Campos a ancho completo */
+.campo-full {
+  grid-column: 1 / -1;
+}
+
+/* Etiquetas e inputs */
+.campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #18372b;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5cb;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid #267044;
+  border-color: transparent;
+}
+
+/* Responsive para celulares */
+@media (max-width: 650px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
