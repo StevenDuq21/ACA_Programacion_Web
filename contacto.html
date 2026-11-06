@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contacto | Ruta Motors </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo Concesionario" class="logo">
+        <h1>Concesionario de Motos</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="cotizar.html">Cotizar</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+<main>
+        <section class="tarjeta" style="margin-top: 24px;">
+            <h2>Servicio al Cliente y Consultas</h2>
+            <p>¿Tienes dudas sobre garantías, servicio técnico o repuestos? Escríbenos.</p>
+
+            <form id="form-contacto" action="#" method="POST" novalidate>
+
+                <div class="form-grid">
+                    <!-- Fila 1 -->
+
+                    <!-- Campo Tipo Text - Nombre -->
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required maxlength="100" placeholder="Ej. Marc Márquez Alentà">
+                    </div>
+
+                    <!-- Campo Tipo Email -->
+                    <div class="campo">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" required placeholder="Ej. marc_marquez@gmail.com">
+                    </div>
+
+                    <!-- Campo Tipo Radio Buttom - Tipo de Solicitud -->
+                    <div class="campo">
+                        <label>Tipo de Solicitud:</label>
+                        <div style="margin-top: 8px;">
+                            <input type="radio" id="peticion" name="tiposolicitud" value="peticion" checked style="width: auto;">
+                            <label for="peticion" style="display: inline; font-weight: normal;">Consulta General</label>
+                            
+                            <input type="radio" id="garantia" name="tiposolicitud" value="garantia" style="width: auto; margin-left: 10px;">
+                            <label for="garantia" style="display: inline; font-weight: normal;">Garantía / Taller</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo Tipo Select - Ciudad de Residencia -->
+                    <div class="campo">
+                        <label for="ciudad">Ciudad de Residencia:</label>
+                        <select id="ciudad" name="ciudad" required>
+                            <option value="">Selecciona la ciudad</option>
+                            <option value="bogota">Bogotá</option>
+                            <option value="medellin">Medellín</option>
+                            <option value="cali">Cali</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo Tipo Textarea - Detalle de la Consulta -->
+                    <div class="campo campo-full">
+                        <label for="mensaje">Detalle de su Consulta:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required maxlength="255" placeholder="Escriba aquí su mensaje..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Mensaje de error/éxito para JS -->
+                <div id="mensaje-error-contacto" style="font-weight: bold; margin-top: 15px;"></div>
+
+                <!-- Botón de envío -->
+                <div style="text-align: center; margin-top: 20px;">
+                    <button type="submit" class="boton" style="border: none; cursor: pointer; width: 200px;">Enviar Mensaje</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Concesionario de Motos - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
