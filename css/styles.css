@@ -11,7 +11,7 @@ section { padding: 44px 0; }
 h1 { color: #f0f5f0; }
 h2 { color: #03ff0f; }
 h3 { color: #084c07; }
-form { color: #0ba147; font-weight: bold; }
+form { color: #0fd75f; font-weight: bold; }
 .bienvenida { text-align: center; padding: 55px 20px; margin-top: 24px; background: white; border-radius: 10px; }
 .boton { text-align: center;display: inline-block; padding: 11px 18px; margin-top: 10px; color: white; background: #267044; border-radius: 5px; text-decoration: none; }
 .tarjetas { display: flex; gap: 20px; }
@@ -33,4 +33,36 @@ footer { padding: 18px; text-align: center; color: white; background: #18372b; }
   nav { width: 100%; margin: 5px 0 0; justify-content: center; gap: 16px; }
   .tarjetas {display: grid;grid-template-columns: repeat(2, minmax(0, 2fr));gap: 20px;}
   .tarjeta img .tarjetas {display: grid;grid-template-columns: repeat(2, minmax(0, 3fr));gap: 20px;}
+}
+
+/* Estilo para los Formularios */
+
+form {text-align: left; max-width: 750px; margin: 20px auto 0 auto;}
+
+/* Cuadrícula de 2 columnas para escritorio */
+.form-grid {display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px 20px;
+}
+
+/* Campos a ancho completo */
+.campo-full {grid-column: 1 / -1;}
+
+/* Etiquetas e inputs */
+.campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #042f1f;
+}
+
+.campo input,
+.campo select,
+.campo textarea {width: 100%;padding: 10px; border: 1px solid #cbd5cb;border-radius: 5px;font-size: 14px;}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {outline: 2px solid #31f680;border-color: transparent;}
+
+/* Responsive para celulares */
+@media (max-width: 650px) {
+  .form-grid {grid-template-columns: 1fr;}
 }

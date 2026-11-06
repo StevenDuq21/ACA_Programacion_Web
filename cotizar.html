@@ -22,54 +22,87 @@
         </nav>
     </header>
 
-    <main>
-        <section class="tarjeta" style="margin-top: 24px;">
-            <h2><center>Cotiza tu Motocicleta o Agenda Test Drive</center></h2>
+<main>
+        <section class="tarjeta" style="margin-top: 24px; margin-bottom: 30px;">
+            <h2>Cotiza tu Motocicleta o Agenda Test Drive</h2>
             <p>Diligencia el siguiente formulario para recibir información comercial detallada.</p>
 
             <!-- Inicio del Formulario -->
             <form id="form-cotizacion" action="#" method="POST" novalidate>
                 
-                <!-- Campo Tipo Text -->
-                <div style="margin-bottom: 15px;">
-                    <label for="nombre"><strong>Nombre Completo:</strong></label><br>
-                    <input type="text" id="nombre" name="nombre" required maxlength="100" placeholder="Ej. Marc Márquez Alentà" style="width: 100%; padding: 8px; margin-top: 5px;">
+                <div class="form-grid">
+                    <!-- Fila 1 -->
+
+                    <!-- Campo Tipo Text - Nombre -->
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required maxlength="100" placeholder="Ej. Marc Márquez Alentà">
+                    </div>
+
+                    <!-- Campo Tipo Number - Cédula -->
+                    <div class="campo">
+                        <label for="cedula">Número de Cédula:</label>
+                        <input type="number" id="cedula" name="cedula" required placeholder="Ej. 1024568512" oninput="if (this.value.length > 10) this.value = this.value.slice(0, 10);">
+                    </div>
+
+                    <!-- Fila 2 -->
+
+                    <!-- Campo Tipo Email -->
+                    <div class="campo">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" required placeholder="marc_marquez@gmail.com">
+                    </div>
+
+                    <!-- Campo Tipo Number - Número de Celular -->
+                    <div class="campo">
+                        <label for="telefono">Número de Celular:</label>
+                        <input type="number" id="telefono" name="telefono" required min="3000000000" max="3999999999" placeholder="Ej. 3001234567" oninput="if (this.value.length > 10) this.value = this.value.slice(0, 10);">
+                    </div>
+
+                    <!-- Fila 3: Abarca 2 columnas -->
+                    
+                    <!-- Campo Tipo Select - Modelo de Interés -->
+                    <div class="campo campo-full">
+                        <label for="modelo">Modelo de Interés:</label>
+                        <select id="modelo" name="modelo" required>
+                            <option value="">Selecciona una moto</option>
+                            <option value="CB100">CB 100 2027</option>
+                            <option value="CB125F">CB 125F 2027</option>
+                            <option value="CB190R">CB 190R 2.0 2027</option>
+                            <option value="CB125HORNET">CB 125 HORNET 2027</option>
+                            <option value="XR190L">XR 190 L 2.0 2027</option>
+                            <option value="XR150L">XR 150 L 2.0 2027</option>
+                            <option value="XR300L">XR 300 L 2027</option>
+                            <option value="CB650R">CB 650R 2026</option>
+                            <option value="CB1000R">CB 1000R 2025</option>
+                            <option value="CBR650R">CBR 650R 2026</option>
+                            <option value="CBR1000RRR">CBR 1000RRR 2025</option>
+                        </select>
+                    </div>
+
+                    <!-- Fila 4 -->
+
+                    <!-- Campo Tipo Date  - Fecha preferida -->
+                    <div class="campo">
+                        <label for="fecha">Fecha Preferida de Atención:</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+
+                    <!-- Campo Tipo Time - Hora preferida -->
+                    <div class="campo">
+                        <label for="hora">Hora Preferida de Atención:</label>
+                        <input type="time" id="hora" name="hora">
+                    </div>
                 </div>
 
-                <!-- Campo Tipo Email -->
-                <div style="margin-bottom: 15px;">
-                    <label for="correo"><strong>Correo Electrónico:</strong></label><br>
-                    <input type="email" id="correo" name="correo" required placeholder="marc_marquez@gmail.com" style="width: 100%; padding: 8px; margin-top: 5px;">
+                <!-- Mensaje de error/éxito para JS -->
+                <div id="mensaje-error-cotizar" style="font-weight: bold; margin-top: 15px;"></div>
+
+                <!-- Botón de envío -->
+                <div style="text-align: center; margin-top: 20px;">
+                    <button type="submit" class="boton" style="border: none; cursor: pointer; width: 200px;">Enviar Cotización</button>
                 </div>
-
-                <!-- Campo Tipo Number -->
-                <div style="margin-bottom: 15px;">
-                    <label for="telefono"><strong>Número de Celular:</strong></label><br>
-                    <input type="number" id="telefono" name="telefono" required min="3000000000" max="3999999999" placeholder="Ej. 3001234567" style="width: 100%; padding: 8px; margin-top: 5px;">
-                </div>
-
-                <!-- Campo Tipo Select -->
-                <div style="margin-bottom: 15px;">
-                    <label for="modelo"><strong>Modelo de Interés:</strong></label><br>
-                    <select id="modelo" name="modelo" required style="width: 100%; padding: 10px; margin-top: px;">
-                        <option value="">Selecciona una moto</option>
-                        <option value="CB100">CB 100 2027</option>
-                        <option value="CB125F">CB 125F 2027</option>
-                        <option value="CB190R">CB 190R 2.0 2027</option>
-                        <option value="CB125HORNET">CB 125 HORNET 2027</option>
-                    </select>
-                </div>
-
-                <!-- Campo Tipo Date -->
-                <div style="margin-bottom: 15px;">
-                    <label for="fecha"><strong>Fecha preferida para atención:</strong></label><br>
-                    <input type="date" id="fecha" name="fecha" style="width: 100%; padding: 8px; margin-top: 5px;">
-                </div>
-
-                <!-- Contenedor para mensajes de error de JavaScript -->
-                <div id="mensaje-error-cotizar" style="color: #d9534f; font-weight: bold; margin-bottom: 15px;"></div>
-
-                <button type="submit" class="boton" style="border: none; cursor: pointer;">Enviar Cotización</button>
+<!--prueba -->
             </form>
         </section>
     </main>
