@@ -48,11 +48,11 @@ nav a:hover {
 }
 
 main {
-  width: 90%;
-  min-width: 900px;
-  margin: auto;
+  width: 92%;
+  max-width: 1200px;
+  min-width: 0;
+  margin: 0 auto;
 }
-
 section {
   padding: 44px 0;
 }
@@ -194,6 +194,8 @@ footer {
 @media (max-width: 600px) {
   header {
     justify-content: center;
+    width: 100%;
+    
   }
 
   nav {
@@ -204,16 +206,14 @@ footer {
   }
 
   .tarjetas {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 2fr));
-    gap: 20px;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
 
-  .tarjeta img .tarjetas {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 2fr));
-    gap: 20px;
-  }
+.tarjeta {
+  min-width: 0;
+}
 }
 
 /* Estilo para los Formularios */
@@ -296,4 +296,59 @@ form {
 .tabla-contenedor {
   overflow-x: auto;
 }
+/* Tableta grande: dos tarjetas por fila */
+@media (max-width: 1100px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
+/* Tableta y celular: una tarjeta por fila y menú reorganizado */
+@media (max-width: 760px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campo-full {
+    grid-column: auto;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+  main {
+    width: calc(100% - 24px);
+  }
+
+  header {
+    padding: 14px 12px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav {
+    gap: 10px 14px;
+  }
+
+  .tarjeta {
+    padding: 8px;
+  }
+}
