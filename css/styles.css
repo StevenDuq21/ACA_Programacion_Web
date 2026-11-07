@@ -78,7 +78,7 @@ form {
   text-align: center;
   padding: 55px 20px;
   margin-top: 24px;
-  background: white;
+  background: rgb(242, 239, 239);
   border-radius: 10px;
 }
 
@@ -101,7 +101,6 @@ form {
 
 .tarjeta {
   text-align: center;
-  flex: 2;
   padding: 10px;
   background: white;
   border: 5px solid #25e725;
@@ -297,6 +296,8 @@ form {
 .tabla-contenedor {
   overflow-x: auto;
 }
+
+/*RESPONSIVE*/
 /* Tableta grande: dos tarjetas por fila */
 @media (max-width: 1100px) {
   .tarjetas {
