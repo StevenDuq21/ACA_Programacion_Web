@@ -36,3 +36,7 @@ JavaScript revisa los campos y valida formatos, teléfono, fecha y hora.
 Si hay un error, muestra un mensaje para que la persona corrija la información.  
 En un sistema real se usaría **POST** para enviar los datos al backend; este proyecto aún no los guarda ni transmite.  
 **PUT** sirve para actualizar un recurso existente y **DELETE** para eliminarlo.
+
+## Desarollado por:
+## Jhon Alexander Hurtado Lozada
+## David Stiven Duque Acosta
