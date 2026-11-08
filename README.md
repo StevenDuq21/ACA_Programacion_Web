@@ -38,5 +38,5 @@ En un sistema real se usaría **POST** para enviar los datos al backend; este pr
 **PUT** sirve para actualizar un recurso existente y **DELETE** para eliminarlo.
 
 ## Desarollado por:
-## Jhon Alexander Hurtado Lozada
-## David Stiven Duque Acosta
+### Jhon Alexander Hurtado Lozada
+### David Steven Duque Acosta
